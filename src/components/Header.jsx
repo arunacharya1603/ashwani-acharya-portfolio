@@ -32,10 +32,10 @@ const Header = () => {
           <ul className="flex space-x-4">
             <li>
               <NavLink
-                exact
+                exact="true"
                 to="/"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Home
@@ -45,7 +45,7 @@ const Header = () => {
               <NavLink
                 to="/about"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 About
@@ -55,7 +55,7 @@ const Header = () => {
               <NavLink
                 to="/services"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Services
@@ -65,7 +65,7 @@ const Header = () => {
               <NavLink
                 to="/contact"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Contact
@@ -101,10 +101,10 @@ const Header = () => {
           <ul className="flex flex-col items-center space-y-4 mt-4">
             <li>
               <NavLink
-                exact
+                exact="true" 
                 to="/"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Home
@@ -114,7 +114,7 @@ const Header = () => {
               <NavLink
                 to="/about"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 About
@@ -124,7 +124,7 @@ const Header = () => {
               <NavLink
                 to="/services"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Services
@@ -134,7 +134,7 @@ const Header = () => {
               <NavLink
                 to="/contact"
                 className="text-white hover:text-gray-400"
-                activeClassName="text-gray-300"
+                activeclassname="text-gray-300"
                 onClick={closeMenu}
               >
                 Contact
