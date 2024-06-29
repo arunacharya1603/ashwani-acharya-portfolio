@@ -17,7 +17,7 @@ const Home = () => {
               Feel free to reach out to me via email.
             </p>
             <a
-              href="mailto:your-email@example.com?subject=Contact%20Request&body=Please%20provide%20your%20message%20here."
+              href="mailto:padhaimessage@gmail.com?subject=Contact%20Request&body=Please%20provide%20your%20message%20here."
               className="inline-block"
             >
               <button className="w-32 h-12 rounded-md mt-3 bg-yellow-800 text-white shadow-yellow-600 drop-shadow hover:bg-yellow-900">
