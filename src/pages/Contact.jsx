@@ -49,6 +49,8 @@ const handleSubmit = async (e) => {
     console.log(result);
     if (result.status === "success") {
       setStatus({ success: true, message: "Message sent successfully" });
+      setButtonText("Send");
+
     } else {
       setStatus({ success: false, message: "Failed to send message" });
     }

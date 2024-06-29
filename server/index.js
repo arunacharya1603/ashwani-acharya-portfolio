@@ -4,15 +4,21 @@ import path from 'path';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
 dotenv.config({ path: './.env' }); // Specify the path to your.env file
 
 const PORT = process.env.PORT || 3008;
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, '../dist')))
 app.use(cors());
 app.use(bodyParser.json());
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.resolve(__dirname, '../dist')))
+
 
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!"})
@@ -61,7 +67,7 @@ app.post("/api/contact", bodyParser.urlencoded({extended: false}), (req, res) =>
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '/dist', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
 })
 
 app.listen(PORT, () => {
