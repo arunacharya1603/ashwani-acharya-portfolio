@@ -10,7 +10,7 @@ dotenv.config({ path: './.env' }); // Specify the path to your.env file
 const PORT = process.env.PORT || 3008;
 
 const app = express();
-app.use(express.static(path.resolve(__dirname, '../build')))
+app.use(express.static(path.resolve(__dirname, '../dist')))
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -61,7 +61,7 @@ app.post("/api/contact", bodyParser.urlencoded({extended: false}), (req, res) =>
 
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '/dist', 'index.html'));
 })
 
 app.listen(PORT, () => {
